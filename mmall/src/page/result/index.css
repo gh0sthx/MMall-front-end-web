@@ -1,0 +1,26 @@
+/*
+* @Author: Rosen
+* @Date:   2017-05-19 21:52:52
+* @Last Modified by:   Rosen
+* @Last Modified time: 2017-05-19 22:45:55
+*/
+.page-wrap{
+    padding: 30px 0;
+    margin-top: 20px;
+    text-align: center;
+    background: #fff;
+}
+.result-con{
+    display: none;
+}
+.result-con .result-title{
+    color: #555;
+}
+.result-con .result-content{
+    margin-top: 20px;
+}
+.result-con .result-content .link{
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+}

@@ -1,0 +1,55 @@
+<table class="order-list-table header">
+    <tr>
+        <th class="cell cell-img">&nbsp;</th>
+        <th class="cell cell-info">商品信息</th>
+        <th class="cell cell-price">单价</th>
+        <th class="cell cell-count">数量</th>
+        <th class="cell cell-total">小计</th>
+    </tr>
+</table>
+{{#list}}
+<table class="order-list-table order-item">
+    <tr>
+        <td class="order-info" colspan="5">
+            <span class="order-text">
+                <span>订单号:</span>
+            <a class="link" href="./order-detail.html?orderNo={{orderNo}}" target="_blank">
+                <span class="order-num">{{orderNo}}</span>
+            </a>
+            </span>
+            <span class="order-text">{{createTime}}</span>
+            <span class="order-text">收件人:{{receiverName}}</span>
+            <span class="order-text">订单状态:{{statusDesc}}</span>
+            <span class="order-text">
+                订单总价:
+                <span class="order-total">{{payment}}</span>
+            </span>
+            <span class="order-text">
+            <a class="link" href="./order-detail.html?orderNo={{orderNo}}" target="_blank">
+                <span class="order-detail">查看详情</span>
+            </a>
+            </span>
+        </td>
+    </tr>
+    {{#orderItemVoList}}
+    <tr>
+        <td class="cell cell-img">
+            <a href="./detail.html?productId={{productId}}" target="_blank">
+                <img class="p-img" src="{{imageHost}}{{productImage}}" alt="{{productName}}" >
+            </a>
+        </td>
+        <td class="cell cell-info">
+            <a class="link" href="./detail.html?productId={{productId}}" target="_blank">
+            {{productName}}
+            </a>
+        </td>
+        <td class="cell cell-price">¥{{currentUnitPrice}}</td>
+        <td class="cell cell-count">{{quantity}}</td>
+        <td class="cell cell-total">¥{{totalPrice}}</td>
+    </tr>
+    {{/orderItemVoList}}
+</table>   
+{{/list}}
+{{^list}}
+<p class="err-tip">您暂时没有订单</p>
+{{/list}}     

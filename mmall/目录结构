@@ -1,0 +1,5 @@
+
+src  -page+view   -->dist -view
+     -service             -js
+     -util                -css
+     -image               -resource
